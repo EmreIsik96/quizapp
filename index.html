@@ -10,48 +10,80 @@
     <title>Document</title>
 
     <!-- BOOTSTRAP FILES -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
 </head>
 
-<body>
+<body onload="init()">
+
     <!--///////////////////////////////////// NAVBAR ///////////////////////////////////// -->
+
     <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">QuizApp</span>
+        <div class="container-fluid" style="display: flex; justify-content: center;">
+            <span class="navbar-brand mb-0 h1" style="font-size: 30px;">QuizApp</span>
         </div>
     </nav>
     
 <!--///////////////////////////////////// MainCard ///////////////////////////////////// -->
+
     <div class="mainContainer">
-       
-        <div class="leftContainer">
+
+<!--///////////////////////////////////// LeftContainer ///////////////////////////////////// -->
+
+        <div class="leftContainer" style="width: 200px; height: 550px;">
             <div class="logoOnLeftContainer">
             <img style="width: 120px; height: 100px;" src="./img/logo.png">
             </div>
         </div>
-        <div class="card" style="width: 500px; height: 700px;">
-            <div class="card-body">
-                <h5 class="card-title mb-4">Frage</h5>
 
-                <div class="cardIn mb-2" >                   
-                        Antwort
-                      </div>
-                    <div class="cardIn mb-2" >                    
-                        Antwort
-                      </div>
-                    <div class="cardIn mb-2" >
-                        Antwort
-                      </div>
-                    <div class="cardIn mb-2">               
-                        Antwort
-                      </div>                      
-                    </div>
+<!--///////////////////////////////////// Card ///////////////////////////////////// -->
+
+        <div id="endScreen" style="display: none;">
+            <div class="card" style="width: 500px; height: 550px; display: flex; justify-content: center; align-items: center;">
+                <img style="height: 100px; width: 100px;" src="./img/brain result.png">
+                <h5>Quiz Beendet!</h5>
+                <div class="endScreenRightQuestionContainer">
+                    Du hast <b id="rightAnswered"></b> Fragen von <b id="allQuestionsEnd"></b> richtig beantwortet.
+                </div>
+                <div>
+                    <button onclick="restartGame()" class="restartButton btn btn-primary">Erneut Spielen</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="questionBody" class="card" style="width: 500px; height: 550px;">
+            <div class="card-body">
+                <h5 id="questionID" class="card-title mb-4"></h5>
+                <div class="progress">
+                    <div id="percentCounter" class="progress-bar" role="progressbar" style="width: 0%;"></div>
                   </div>
+                
+                <div id="answer_1" class="cardIn mb-4" onclick="answer('answer_1')">      
+                    <h6 class="card-title mb-4"></h6>
+                </div>
+               
+                <div id="answer_2" class="cardIn mb-4" onclick="answer('answer_2')">  
+                    <h6 class="card-title mb-4"></h6>            
+                </div>
+                
+                <div id="answer_3" class="cardIn mb-4" onclick="answer('answer_3')">
+                    <h6 class="card-title mb-4"></h6>
+                </div>
+
+                <div id="answer_4" class="cardIn mb-4" onclick="answer('answer_4')"> 
+                    <h6 class="card-title mb-4"></h6>          
+                </div>
+
+                <div class="question-footer">
+                    <span>
+                        <b id="currentQuestion"></b> von <b id="allQuestions"></b> Fragen
+                    </span>
+                    <button onclick="nxtQuestion()" class="btn btn-primary" disabled id="nextButton">Nächste Frage</button>
+                </div>
             </div>
         </div>
     </div>

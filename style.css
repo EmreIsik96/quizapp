@@ -1,7 +1,25 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAF0 !important;
+}
+.container-fluid
+{
+    background-color: #27355C;
+}
+.navbar
+{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.navbar-brand
+{
+    color: white !important;
+}
 .mainContainer
 {
-    background-color: #FFFAF0 !important;
-    min-height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,15 +32,48 @@
     align-items: center;
     padding-left: 20px;
 }
+.progress
+{
+    margin-bottom: 20px !important;
+}
+.cardIn:hover
+{
+    cursor: pointer;
+    scale: 1.05;
+    background-color: lightgray;
+}
 .leftContainer
 {
-    width: 200px;
-    height: 700px;
     background-color: #27355C;
 }
 .logoOnLeftContainer
 {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+.card-title
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.question-footer
+{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+}
+.bg-success, .bg-danger
+{
+    color: white;
+}
+.restartButton
+{
+    margin: 40px;
+}
+.endScreenRightQuestionContainer
+{
     margin-top: 20px;
 }
