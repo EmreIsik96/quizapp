@@ -1,0 +1,28 @@
+.mainContainer
+{
+    background-color: #FFFAF0 !important;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardIn
+{
+    height: 60px;
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.leftContainer
+{
+    width: 200px;
+    height: 700px;
+    background-color: #27355C;
+}
+.logoOnLeftContainer
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
