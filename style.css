@@ -77,17 +77,96 @@ body
 {
     margin-top: 20px;
 }
+.endScreenIcon
+{
+    height: 100px;
+    width: 100px;
+}
+.leftContainerIcon
+{
+    width: 70px;
+    height: 60px;
+}
 
-/*@media(max-width: 730px)
+@media(max-width: 730px)
 {
     .leftContainer
     {
-        width: 0px;
-        height: 440px; 
+        width: 100px !important;
+        height: 500px !important; 
     }
-    img
+    .card-body, .card
     {
-        width: 90px;
-        height: 70px;
+        width: 400px !important;
+        height: 500px !important;
     }
-}*/
+    .cardIn 
+    {
+        height: 40px;
+    }
+    .card-title,.endScreenRightQuestionContainer
+    {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+@media(max-width: 530px)
+{
+    .leftContainer
+    {
+        width: 100px !important;
+        height: 500px !important; 
+    }
+    .card-body, .card
+    {
+        width: 300px !important;
+        height: 500px !important;
+    }
+    .cardIn 
+    {
+        height: 40px;
+    }
+}
+@media(max-width: 420px)
+    {
+    .card-body, .card
+    {
+        width: 280px !important;
+        height: 500px !important;
+    }
+    }
+@media(max-width: 390px)
+{
+    .leftContainer
+    {
+        width: 70px !important;
+        height: 500px !important;    
+    }
+    .leftContainerIcon
+    {
+        height: 50px;
+        width: 60px;
+    }
+    .card-title
+    {
+        font-size: 16px !important;
+    }
+}
+@media(max-width: 360px)
+{   
+    .card-body, .card
+    {
+        width: 240px !important;
+        height: 500px !important;
+    }
+    span
+    {
+        font-size: 14px !important;
+    }
+    button
+    {
+        height: 50px !important;
+        width: 85px;
+        font-size: 13px !important;
+    }
+}
